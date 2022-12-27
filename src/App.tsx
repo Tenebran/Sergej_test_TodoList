@@ -1,33 +1,15 @@
 import React from 'react';
 import './App.scss';
+import { TodoList } from './components/TodoList/TodoList';
 
 function App() {
-  console.log('hello');
+  const title1: string = 'What to learn -1';
+  const title2: string = 'What to learn -2';
+
   return (
-    <div className="App">
-      <div>
-        <h3>What to learn</h3>
-        <div>
-          <input />
-          <button>+</button>
-        </div>
-        <ul>
-          <li>
-            <input type="checkbox" checked={true} /> <span>HTML&CSS</span>
-          </li>
-          <li>
-            <input type="checkbox" checked={true} /> <span>JS</span>
-          </li>
-          <li>
-            <input type="checkbox" checked={false} /> <span>React</span>
-          </li>
-        </ul>
-        <div>
-          <button>All</button>
-          <button>Active</button>
-          <button>Completed</button>
-        </div>
-      </div>
+    <div className="app">
+      <TodoList title={title1} />
+      <TodoList title={title2} />
     </div>
   );
 }
